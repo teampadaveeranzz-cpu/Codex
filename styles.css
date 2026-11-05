@@ -18,3 +18,4 @@
 .scene-art .robot{width:34%;height:58%;filter:none}
 .scene-art .robot .uploaded-robot{object-fit:cover;border-radius:14px}
 .split-visual.group .robot .uploaded-robot{object-fit:cover;border-radius:14px}
+.product-art .robot .uploaded-robot,.scene-art .robot .uploaded-robot,.split-visual.group .robot .uploaded-robot{object-fit:contain}
