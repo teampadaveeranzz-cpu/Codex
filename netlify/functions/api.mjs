@@ -71,8 +71,7 @@ export default async function handler(req, context) {
       if(clean(data.website,200))return json({ok:true});
       const kind=clean(data.kind,20),name=clean(data.name,120),email=clean(data.email,180).toLowerCase(),phone=clean(data.phone,40);
       if(!['rental','purchase','contact'].includes(kind)||!name||!phone||!validEmail(email))return error('Please enter your name, a valid email address and phone number.');
-      const details={};for(const key of ['company','event_type','event_date','location','robot','duration','business_type','subject','message'])if(key in data)details[key]=clean(data[key],key==='message'?3000:250);
-      if(kind==='contact'&&!details.message)return error('Please add a short message so we can help.');
+      const details={};for(const key of ['company','event_type','event_date','location','robot','duration','business_type','subject','message','call_time'])if(key in data)details[key]=clean(data[key],key==='message'?3000:250);
       if(kind==='rental'&&!['event_type','event_date','location','robot','duration'].every(k=>details[k]))return error('Please complete the required event details.');
       if(kind==='purchase'&&!['robot','business_type','location'].every(k=>details[k]))return error('Please complete the required purchase details.');
       const id=crypto.randomBytes(16).toString('hex');const enquiry={id,kind,name,email,phone,details,status:'new',created_at:new Date().toISOString()};
