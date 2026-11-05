@@ -31,7 +31,7 @@ function robotArt(kind='advertising',extra=''){
   return `<div class="robot ${extra}">${art}</div>`;
 }
 function robotVisual(kind='advertising',slot=kind,extra=''){
-  const defaults={advertising:'/assets/robots/z01-advertising.jpg',serving:'/assets/robots/z02-serving.jpg',companion:'/assets/robots/z03-companion.jpg'};
+  const defaults={advertising:'/assets/robots/z01-advertising.jpg',serving:'/assets/robots/z02-serving.jpg',companion:'/assets/robots/z03-companion-clean.jpg'};
   const src=siteContent.images?.[slot]||defaults[kind];
   if(src)return `<div class="robot ${extra}"><img class="uploaded-robot" src="${esc(src)}" alt="${esc(robots[kind]?.name||'ZEVON robot')} product reference" loading="lazy"></div>`;
   return robotArt(kind,extra);
