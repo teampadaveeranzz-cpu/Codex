@@ -65,3 +65,6 @@
 @media(max-width:1000px){.venue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.venue-card{min-height:320px}}
 @media(max-width:760px){.venue-copy{left:15px;right:15px;bottom:15px}.venue-card-bottom{font-size:.62rem}.venue-open{font-size:.65rem;min-height:32px;padding:0 10px}.venue-dialog-content .venue-art{height:280px}.venue-dialog-copy{padding:22px}.venue-robot{width:34%;right:2%}.contact-stack{gap:10px}.contact-card{padding:14px}.form-card{padding:22px}}
 @media(max-width:430px){.venue-grid{grid-template-columns:1fr}.venue-card{min-height:330px}.venue-card-home{min-height:290px}.venue-card-bottom{font-size:.7rem}.venue-open{font-size:.7rem}.venue-dialog-content .venue-art{height:225px}.venue-dialog-copy .btn{width:100%;margin:10px 0 0}.venue-dialog-copy .venue-contact-link{margin-left:0}.cta-band .hero-actions .btn{width:auto}}
+.venue-robot{right:3%;top:5%;bottom:40%;width:42%}
+.venue-card-home .venue-robot{right:1%;width:36%;height:62%;bottom:26%;top:auto}
+.venue-dialog-content .venue-robot{right:6%;width:42%;height:78%;top:4%;bottom:auto}
